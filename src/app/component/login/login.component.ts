@@ -8,24 +8,21 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  user={
-    "email":"anil.sharma@gmail.com",
-    "password":"asdf@123d"
-  }
-
   constructor(private login:LoginService) { }
 
   ngOnInit() {
-    this.login.userLogin(this.user).subscribe(
-      res => {
-        console.log("Response is",res);
-      }
-    )
+ 
   }
 
   userLogin(login){
-    alert('Hi Welocme........');
-    
+    this.login.userLogin(login.value).subscribe(
+      res => {
+        console.log("Response is",res);
+      },
+      err =>{
+        console.log(err);
+      }
+    )
   }
 
 }
