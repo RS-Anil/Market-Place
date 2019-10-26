@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 import { LoginService } from './component/login/login.service';
 import { MaterialModule } from './common/modules/materail-module';
+import { RegisterComponent } from './component/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
