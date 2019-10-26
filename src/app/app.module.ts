@@ -9,21 +9,28 @@ import { HttpClientModule }    from '@angular/common/http';
 import { LoginService } from './component/login/login.service';
 import { MaterialModule } from './common/modules/materail-module';
 import { RegisterComponent } from './component/register/register.component';
+import { MyDialogComponent } from './common/my-dialog/my-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MyDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [LoginService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    MyDialogComponent
+  ]
 })
 export class AppModule { }

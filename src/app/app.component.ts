@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { MyDialogComponent } from './common/my-dialog/my-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce-app';
+
+  constructor() { }
+
+ 
+ 
 }
