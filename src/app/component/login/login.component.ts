@@ -10,8 +10,10 @@ import { MyDialogComponent } from 'src/app/common/my-dialog/my-dialog.component'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  login:NgForm;
   constructor(
-    private login: LoginService,
+    private loginService: LoginService,
     public dialog: MatDialog
   ) { }
 
@@ -19,21 +21,21 @@ export class LoginComponent implements OnInit {
 
   }
 
-  userLogin(login) {
-    this.login.userLogin(login.value).subscribe(
+  userLogin(login:NgForm) {
+    this.loginService.userLogin(login.value).subscribe(
       res => {
         console.log("Response is", res);
+        login.resetForm();
       },
       err => {
         console.log(err.error);
         this.openModal(err)
       }
     )
-  }
+  } 
 
   openModal(err) {
     const dialogConfig = new MatDialogConfig();
-
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.data = {
