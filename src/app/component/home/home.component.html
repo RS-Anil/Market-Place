@@ -1,0 +1,67 @@
+<mat-toolbar id="mainToolbar" color="primary">
+  <mat-icon (click)="onToolbarMenuToggle()" id="toolbarMenu">subject</mat-icon>
+  App Name
+  <span class="toolbar-spacer"></span>
+  <mat-icon class="toolbar-icon" matBadge="8" matBadgePosition="after" matBadgeColor="accent">notifications</mat-icon>
+</mat-toolbar>
+
+<mat-sidenav-container id="sidenavContainer" fullscreen>
+  <mat-sidenav mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen" opened>
+    <mat-list id="menus">
+      <mat-list-item ngClass="border-btm">
+        <button [routerLink]="['']" class="menu-item" mat-flat-button>
+          <mat-icon >dashboard</mat-icon>
+          Dashboard
+        </button>
+      </mat-list-item>
+      <mat-accordion>
+        <mat-expansion-panel class="sub-menu">
+          <mat-expansion-panel-header>
+            <mat-icon ngClass="mr-20">work</mat-icon>
+            Summary
+          </mat-expansion-panel-header>
+          <!-- <mat-panel-description> -->
+          <!-- <mat-list-item> -->
+          <button class="menu-item" mat-flat-button>
+            Summary 1
+          </button>
+          <button class="menu-item" mat-flat-button>
+            Summary 2
+          </button>
+          <button class="menu-item" mat-flat-button>
+            Summary 3
+          </button>
+          <!-- </mat-list-item> -->
+          <!-- </mat-panel-description> -->
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-icon ngClass="mr-20">settings_application</mat-icon>
+            Platform
+          </mat-expansion-panel-header>
+          <button [routerLink]="['platform']" class="menu-item" mat-flat-button>
+            FMS
+          </button>
+          <!-- <button class="menu-item" mat-flat-button>
+            Work Item 2
+          </button>
+          <button class="menu-item" mat-flat-button>
+            Work Item 3
+          </button> -->
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+
+      </mat-accordion>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }">
+
+    <div class="container-fluid">
+      <!-- <app-summary></app-summary> -->
+      <!-- <app-platform></app-platform> -->
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

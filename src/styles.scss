@@ -1,2 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#toolbarMenu {
+    cursor: pointer;
+    margin-right: 20px;
+}
+#mainToolbar .toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+#mainToolbar .toolbar-icon {
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+#sidenavContainer {
+    margin-top: 64px;
+}
+
+#sidenav {
+    width: 240px;
+}
+
+#sidenav.menu-close {
+    width: 68px
+}
+
+#sidenav.menu-open {
+    width: 240px
+}
+
+#sidenav .avatar {
+    background-image: url('http://i.pravatar.cc/300');
+    background-size: cover;
+}
+
+#sidenav .mat-list-item-content {
+    padding: 0;
+}
+
+#sidenav .menu-item {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: 10px;
+}
+
+#sidenav .menu-item:hover {
+  background: #eee;
+}
+#sidenav .menu-item mat-icon {
+    margin-right: 20px;
+    margin-left: 12px;
+}
+
+.dash-list h3 {
+    padding: 12px;
+}
+
+.mat-drawer-inner-container{
+    overflow-x: hidden !important;
+}
+
+#sidenav div.mat-drawer-inner-container div.mat-expansion-panel-content  div.mat-expansion-panel-body{
+    padding: 0px;
+    button{
+        padding-left: 67px;
+    }
+
+}
+
+.mat-expansion-panel-header:not([aria-disabled=true]){
+    border-bottom: 1px solid #efefef;    
+}
+
+.mb-25{
+    margin-bottom: 25px;
+}
+
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+
+            span.title{
+                padding-right: 15px;
+                display: inline-block;
+            }
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+.notice-success {
+    border-color: #80D651;
+}
+.notice-success>strong {
+    color: #80D651;
+}
+span.badge{
+    margin: 0px 5px;
+}
+.notice-info {
+    border-color: #45ABCD;
+}
+.notice-info>strong {
+    color: #45ABCD;
+}
+

@@ -12,13 +12,15 @@ import { RegisterComponent } from './component/register/register.component';
 import { MyDialogComponent } from './common/my-dialog/my-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterService } from './component/register/register.service';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    MyDialogComponent
+    MyDialogComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

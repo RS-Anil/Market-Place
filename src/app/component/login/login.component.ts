@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { LoginService } from './login.service';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { MyDialogComponent } from 'src/app/common/my-dialog/my-dialog.component';
+import { Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   login:NgForm;
   constructor(
     private loginService: LoginService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public router: Router
   ) { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class LoginComponent implements OnInit {
       res => {
         console.log("Response is", res);
         login.resetForm();
+        this.router.navigate(['home']);
       },
       err => {
         console.log(err.error);
